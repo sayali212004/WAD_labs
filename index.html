@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <div class="sidebar-header text-center">
+          <h3>Admin Dashboard</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+          <li class="active">
+            <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-shopping-cart"></i> Products</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-users"></i> Users</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-book"></i> Courses</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-clipboard-list"></i> Exams</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-chart-bar"></i> Reports</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content -->
+      <div id="content">
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-expand-lg top-navbar">
+          <div class="container-fluid">
+            <button
+              type="button"
+              id="sidebarCollapse"
+              class="btn btn-dark d-inline-block d-md-none"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="d-flex align-items-center ms-auto">
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="fas fa-user-circle me-1"></i> Admin User
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="container-fluid">
+          <!-- Page Heading -->
+          <div
+            class="d-sm-flex align-items-center justify-content-between mb-4"
+          >
+            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+            <a
+              href="#"
+              class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+            >
+              <i class="fas fa-download fa-sm text-white-50"></i> Generate
+              Report
+            </a>
+          </div>
+
+          <!-- Statistics Cards -->
+          <div class="row">
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="stat-card bg-primary">
+                <div class="row">
+                  <div class="col">
+                    <div class="card-title">TOTAL REVENUE</div>
+                    <div class="card-value">$40,000</div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="card-icon">
+                      <i class="fas fa-dollar-sign"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="stat-card bg-success">
+                <div class="row">
+                  <div class="col">
+                    <div class="card-title">TOTAL USERS</div>
+                    <div class="card-value">1,250</div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="card-icon">
+                      <i class="fas fa-users"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="stat-card bg-info">
+                <div class="row">
+                  <div class="col">
+                    <div class="card-title">TOTAL COURSES</div>
+                    <div class="card-value">45</div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="card-icon">
+                      <i class="fas fa-book"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="stat-card bg-warning">
+                <div class="row">
+                  <div class="col">
+                    <div class="card-title">PENDING ORDERS</div>
+                    <div class="card-value">18</div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="card-icon">
+                      <i class="fas fa-clipboard-list"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+            <!-- Placeholder for Chart (would normally use JS) -->
+            <div class="col-xl-8 col-lg-7">
+              <div class="chart-container">
+                <h5 class="mb-4">Revenue Overview</h5>
+                <div class="chart-placeholder">
+                  <p class="text-muted text-center py-5">
+                    Chart would appear here with JavaScript
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Placeholder for Pie Chart -->
+            <div class="col-xl-4 col-lg-5">
+              <div class="chart-container">
+                <h5 class="mb-4">Traffic Sources</h5>
+                <div class="chart-placeholder">
+                  <p class="text-muted text-center py-5">
+                    Pie chart would appear here with JavaScript
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Activity -->
+          <div class="row mt-4">
+            <div class="col-lg-12">
+              <div class="chart-container">
+                <h5 class="mb-4">Recent Activity</h5>
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>User</th>
+                        <th>Activity</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#1234</td>
+                        <td>John Doe</td>
+                        <td>Purchased Course</td>
+                        <td>10 mins ago</td>
+                        <td><span class="badge bg-success">Completed</span></td>
+                      </tr>
+                      <tr>
+                        <td>#1233</td>
+                        <td>Jane Smith</td>
+                        <td>Submitted Exam</td>
+                        <td>25 mins ago</td>
+                        <td><span class="badge bg-warning">Pending</span></td>
+                      </tr>
+                      <tr>
+                        <td>#1232</td>
+                        <td>Robert Johnson</td>
+                        <td>Created Account</td>
+                        <td>1 hour ago</td>
+                        <td><span class="badge bg-success">Completed</span></td>
+                      </tr>
+                      <tr>
+                        <td>#1231</td>
+                        <td>Emily Davis</td>
+                        <td>Requested Refund</td>
+                        <td>2 hours ago</td>
+                        <td><span class="badge bg-danger">Rejected</span></td>
+                      </tr>
+                      <tr>
+                        <td>#1230</td>
+                        <td>Michael Brown</td>
+                        <td>Updated Profile</td>
+                        <td>3 hours ago</td>
+                        <td><span class="badge bg-success">Completed</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper (for dropdowns) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
