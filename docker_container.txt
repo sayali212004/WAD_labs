@@ -12,3 +12,25 @@ docker images
 
 docker ps
 
+docker exec -it your_container_id jshell
+
+jshell> System.out.println("Hello");
+
+jshell> int a=10; a
+
+jshell> int b=20; b
+
+jshell> System.out.println(a+b);
+
+int c=a+d;  c
+
+docker ps
+
+docker stop your_container_id
+
+docker ps
+
+
+
+
+
