@@ -1,0 +1,14 @@
+sudo apt -grt update [sudo]
+
+sudo apt install docker.io
+
+sudo usermod -aG docker #USER
+
+docker images
+
+docker run -it -d openjdk Unable to find
+
+docker images
+
+docker ps
+
