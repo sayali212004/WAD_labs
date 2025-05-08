@@ -1,0 +1,23 @@
+sudo yum update -y
+
+sudo yum install httpd -y
+
+sudo systemctl start httpd
+
+sudo systemctl start httpd
+
+sudo nano /vae/www/html/index.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<body>
+    <h1>helooo world !</h1>
+</body>
+</html>
+
+
+//ctrl+O enter
+//ctrl+x
