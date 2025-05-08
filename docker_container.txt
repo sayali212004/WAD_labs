@@ -1,34 +1,38 @@
-sudo apt -grt update [sudo]
+sudo apt update
 
-sudo apt install docker.io
+sudo apt install -y docker.io
 
-sudo usermod -aG docker #USER
+sudo systemctl start docker
+
+sudo systemctl enable docker
+
+sudo systemctl status docker
+
+sudo usermod -aG docker #USERNAME
 
 docker images
 
-docker run -it -d openjdk Unable to find
-
-docker images
-
-docker ps
-
-docker exec -it your_container_id jshell
+docker run -it openjdk:17 jshell
 
 jshell> System.out.println("Hello");
 
-jshell> int a=10; a
+jshell> int a=10; 
 
-jshell> int b=20; b
+jshell> int b=20; 
 
 jshell> System.out.println(a+b);
 
-int c=a+d;  c
+int c=a+d;  
 
-docker ps
+//2nd terminal
+
+docker images
+
+docker ps -a
 
 docker stop your_container_id
 
-docker ps
+docker ps -a
 
 
 
