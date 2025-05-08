@@ -1,0 +1,49 @@
+//on ubuntu's terminal
+sudo apt update
+
+
+(
+	id apt not working properly:
+
+	date
+
+	sudo datetimectl set -ntp on #on or true
+
+	timedatectl status #system clock system : yes
+	
+	(
+		if failed:
+		
+		sudo apt install ntp
+	
+		sudo systemctl restart ntp
+	)
+
+	sudo date -s "2025-05-08"
+
+)
+
+sudo apt install openssh-server
+
+sudo systemctl enable --now ssh
+
+sudo ufw allow ssh
+
+sudo ufw enable  # If firewall is inactive
+
+sudo utf status
+
+ip a
+
+//on windows terminal
+
+ping ubuntu_ip
+
+ssh username@ubuntu_ip
+
+scp C:\path\to\file.txt username@ubuntu_ip:/home/username/
+
+
+//on ubuntu's terminal
+
+ls
