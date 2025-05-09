@@ -1,0 +1,36 @@
+1. Launch EC2 Instance
+Choose Ubuntu 22.04 AMI
+
+Security Group: Allow ports 22 (for EC2 Connect) and 3000 (for your app)
+
+2. Add Inbound Rule
+Go to EC2 → Instances → Security → Security Groups
+
+Edit Inbound Rules → Add:
+
+Type: Custom TCP
+
+Port: 3000
+
+Source: 0.0.0.0/0 or your IP
+
+3. Connect via EC2 Instance Connect
+In EC2 Console, select your instance → Connect → EC2 Instance Connect → Connect
+
+4. Install Node.js, npm, and PM2
+Run sudo apt update, sudo apt install nodejs npm -y, then sudo npm install -g pm2
+
+5. Get Your App on the Instance
+Use git clone <repo-url> to pull your project, then cd into it
+
+6. Install Dependencies
+Run npm install inside your project folder
+
+7. Start App with PM2
+Run pm2 start app.js --name "server" (replace app.js with your entry file)
+
+8. Enable PM2 on Reboot
+Run pm2 startup, then follow the instruction it gives (usually a sudo env ... command), then run pm2 save
+
+9. Access the App
+Go to http://<your-ec2-public-ip>:3000 in your browser
